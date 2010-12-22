@@ -17,7 +17,7 @@ zip 展開して、そのディレクトリを $SDK とすると、以下のコ�
 
 そして
 
- $SDK/bin/adl.exe NNDD-app.xml
+ $SDK/bin/adl.exe NNDD-app-mod.xml
 
 でデバッグ実行。
 
