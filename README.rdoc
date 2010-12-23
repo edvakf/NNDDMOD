@@ -4,18 +4,19 @@ NNDD (http://sourceforge.jp/projects/nndd/wiki/FrontPage) version 1.27.6 の派�
 
 == 本家との違い
 
--video player の下に URL 読み込みのための入力欄（とボタン）を付けた
+- video player の下に URL 読み込みのための入力欄（とボタン）を付けた
+- 自動アップデートしない
 
 == ビルド
 
 http://www.adobe.com/jp/products/air/tools/ から Flex4 SDK をダウンロードして
 zip 展開して、そのディレクトリを $SDK とする。
 
-src ディレクトリで以下のコマンドを実行
+src ディレクトリで以下のコマンドを実行 (Mac や Linux の場合は .bat と .exe は省略)
 
  $SDK/bin/amxmlc.bat -theme=$SDK/frameworks/themes/Halo/halo.swc NNDD.mxml
 
-これで NNDD.swf ができる。Windows なら mxmlc.exe で、Mac や Linux は amxmlc のはず。
+これで NNDD.swf ができる。
 
 そして
 
