@@ -145,17 +145,33 @@
 	</mx:Script>
 	<mx:Script>
 		<![CDATA[// from VideoSourceSelectionWindow.mxml
-			import mx.core.Application;
-			import mx.events.FlexEvent;
-			
-			import org.mineap.NNDD.util.PathMaker;
-			import org.mineap.util.config.ConfigManager;
 
 			protected function button_play_clickHandler(event:Event):void
 			{
-logManager.addLog("YES!");
 				var url:String = textInput_source.text;
 				if(url != null && url.length > 0){
+
+					var checker:ShortUrlChecker = new ShortUrlChecker();
+					if (checker.isShortUrl(url))
+					{
+						logManager.addLog("短縮URLを展開中...:" + url);
+						checker.addEventListener(Event.COMPLETE, function(event:Event):void
+						{
+							var url:String = checker.url;
+							var videoId:String = PathMaker.getVideoID(url);
+							if(videoId != null){
+								url = "http://www.nicovideo.jp/watch/" + videoId;
+								Application.application.playMovie(url, -1);
+							}
+						});
+						checker.addEventListener(IOErrorEvent.IO_ERROR, function(event:Event):void
+						{
+							logManager.addLog(Message.M_SHORT_URL_EXPANSION_FAIL + ":" + event);
+							Alert.show(Message.M_SHORT_URL_EXPANSION_FAIL, Message.M_ERROR);
+						});
+						checker.expansion(url);
+						return;
+					}
 					
 					try{
 						var file:File = new File(url);
@@ -165,31 +181,8 @@ logManager.addLog("YES!");
 					}catch(error:Error){
 						
 						var videoId:String = PathMaker.getVideoID(url);
-logManager.addLog("videoId:" + videoId + ",url" + url);
 						if(videoId != null){
 							url = "http://www.nicovideo.jp/watch/" + videoId;
-						}else{
-							
-							var checker:ShortUrlChecker = new ShortUrlChecker();
-							if (checker.isShortUrl(url))
-							{
-								logManager.addLog("短縮URLを展開中...:" + url);
-								checker.addEventListener(Event.COMPLETE, function(event:Event):void
-								{
-									var url:String = checker.url;
-									var videoId:String = PathMaker.getVideoID(url);
-									if(videoId != null){
-										url = "http://www.nicovideo.jp/watch/" + videoId;
-										Application.application.playMovie(url, -1);
-									}
-								});
-								checker.addEventListener(IOErrorEvent.IO_ERROR, function(event:Event):void
-								{
-									logManager.addLog(Message.M_SHORT_URL_EXPANSION_FAIL + ":" + event);
-									Alert.show(Message.M_SHORT_URL_EXPANSION_FAIL, Message.M_ERROR);
-								});
-								checker.expansion(url);
-							}
 						}
 						
 					}
