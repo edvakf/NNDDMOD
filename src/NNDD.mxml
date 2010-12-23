@@ -95,7 +95,7 @@
 			{
 				// ツールチップのデフォルトサイズを変更
 				var css:CSSStyleDeclaration = StyleManager.getStyleDeclaration("ToolTip");
-				css.setStyle("fontSize", 10);
+				if (css) css.setStyle("fontSize", 10);
 			}
 
 			private function get openNicosoundMenuItem():ContextMenuItem{
