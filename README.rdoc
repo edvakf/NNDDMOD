@@ -9,9 +9,11 @@ NNDD (http://sourceforge.jp/projects/nndd/wiki/FrontPage) version 1.27.6 の派�
 == ビルド
 
 http://www.adobe.com/jp/products/air/tools/ から Flex4 SDK をダウンロードして
-zip 展開して、そのディレクトリを $SDK とすると、以下のコマンドを実行
+zip 展開して、そのディレクトリを $SDK とする。
 
- $SDK/bin/mxmlc.exe +configname=air -theme=$SDK/frameworks/themes/Halo/halo.swc NNDD.mxml
+src ディレクトリで以下のコマンドを実行
+
+ $SDK/bin/amxmlc.bat -theme=$SDK/frameworks/themes/Halo/halo.swc NNDD.mxml
 
 これで NNDD.swf ができる。Windows なら mxmlc.exe で、Mac や Linux は amxmlc のはず。
 
@@ -21,7 +23,15 @@ zip 展開して、そのディレクトリを $SDK とすると、以下のコ�
 
 でデバッグ実行。
 
-air ファイルの作り方はまだよくわかってない。
+air ファイルはまず
+
+ $SDK/bin/adt.bat -certificate -cn SelfSigned 1024-RSA mycertificate.pfx パスワード
+
+で mycertificate.pfx ファイルを作り（最初の一回）
+
+ $SDK/bin/adt.bat -package -storetype pkcs12 -keystore mycertificate.pfx NNDD.air NNDD-app-mod.xml NNDD.swf icon32.png icon128.png icon48.png icon16.png
+
+でパスワードを入力すれば作れる。
 
 == 作ってる人
 
