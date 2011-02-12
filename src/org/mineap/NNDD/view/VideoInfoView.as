@@ -1600,3 +1600,22 @@ private function playListReverseButtonClicked(event:Event):void{
 	playListProvider = tempArrayCollection;
 }
 
+private function playListShuffleButtonClicked(event:Event):void{
+	var tempArrayCollection:ArrayCollection = new ArrayCollection();
+	
+	for each(var object:Object in playListProvider){
+		tempArrayCollection.addItem(object);
+	}
+	
+	var i:int = tempArrayCollection.length;
+	while (--i) {
+		var j:int = Math.floor( Math.random() * (i + 1) );
+		if (i == j) continue;
+		var object:Object = tempArrayCollection.getItemAt(i);
+		tempArrayCollection.setItemAt( tempArrayCollection.getItemAt(j), i );
+		tempArrayCollection.setItemAt( object, j );
+	}
+	
+	playListProvider = tempArrayCollection;
+}
+

@@ -246,6 +246,7 @@
 					<mx:Button label="↓↑" left="53" bottom="5" id="button_reverse" click="playListReverseButtonClicked(event)" toolTip="このプレイリストの順番を逆順にします"/>
 					<mx:Button left="101" bottom="5" label="保存" click="playListSaveButtonClicked(event)" toolTip="このプレイリストの内容を保存します"/>
 					<mx:Button left="155" bottom="5" label="クリア" click="playListClearButtonClicked(event)" toolTip="このプレイリストを空にします"/>
+					<mx:Button left="213" bottom="5" label="Shuffle" id="button_shuffle" click="playListShuffleButtonClicked(event)" toolTip="このプレイリストをシャッフルします"/>
 					<mx:Label left="0" top="0" right="0" id="label_playListTitle" text="{label_playListTitle_dataProvider}"/>
 				</mx:Canvas>
 				<mx:Canvas label="タグ" width="100%" height="100%" id="canvas_Tag">
