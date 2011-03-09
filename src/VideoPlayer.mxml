@@ -269,11 +269,9 @@
 		</mx:VBox>
 		<mx:Canvas left="5" right="5" bottom="5" height="22">
 			<mx:Label fontSize="11" left="0" top="0" bottom="0" width="60" text="URL/File" />
-			<mx:TextInput left="60" right="120" top="0" bottom="0" id="textInput_source" 
+			<mx:TextInput left="60" right="5" top="0" bottom="0" id="textInput_source" 
 				  		enter="button_play_clickHandler(event)" 
 				  		focusIn="textInput_source_focusInHandler(event)"/>
-			<mx:Button label="参照..." right="60" bottom="0" width="60" height="100%" id="button_open" click="button_open_clickHandler(event)"/>
-			<mx:Button label="再生" right="0" bottom="0" width="60" height="100%" id="button_play" click="button_play_clickHandler(event)"/>
 		</mx:Canvas>
 	</mx:Canvas>
 </mx:Window>
