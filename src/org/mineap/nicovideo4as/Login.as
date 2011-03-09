@@ -52,6 +52,11 @@ package org.mineap.nicovideo4as
 		public static const TOP_PAGE_URL:String = "http://www.nicovideo.jp/";
 		
 		/**
+		 * ニコニコ動画のドメインです。
+		 */
+		public static const HOST_URL:String = "http://nicovideo.jp/";
+		
+		/**
 		 * 
 		 */
 		public static const LOGIN_SUCCESS:String = "LoginSuccess";
@@ -89,7 +94,7 @@ package org.mineap.nicovideo4as
 		 */
 		public function login(user:String, password:String, url:String=LOGIN_URL, isDefault:Boolean=true, topPageUrl:String=TOP_PAGE_URL, isRetry:Boolean = true):void{
 			if(isDefault){
-				setURLRequestDefaults(user, password, topPageUrl);
+				setURLRequestDefaults(user, password, HOST_URL);
 			}
 			
 			this._isRetry = isRetry;
@@ -104,10 +109,57 @@ package org.mineap.nicovideo4as
 			this._loginRequest.method = "POST";
 			this._loginRequest.data = variables;
 			
+			if (isRetry) {
+				checkLogin();
+				return;
+			}
+			
 			this._loginLoader.addEventListener(HTTPStatusEvent.HTTP_RESPONSE_STATUS, httpCompleteHandler);
 			this._loginLoader.addEventListener(IOErrorEvent.IO_ERROR, errorHandler);
 			this._loginLoader.addEventListener(SecurityErrorEvent.SECURITY_ERROR, errorHandler);
 			this._loginLoader.load(this._loginRequest);
+		}
+		
+		/**
+		 * とりあえずトップページに HEAD リクエストを送ってみて、ログインしてるかどうかを確認します。
+		 *
+		 */
+		private function checkLogin(topPageUrl:String=TOP_PAGE_URL):void{
+			var loader:URLLoader = new URLLoader();
+			loader.addEventListener(HTTPStatusEvent.HTTP_RESPONSE_STATUS, checkLoginCompleteHandler);
+			loader.addEventListener(IOErrorEvent.IO_ERROR, errorHandler);
+			var request:URLRequest = new URLRequest(topPageUrl);
+			request.method = "HEAD";
+			loader.load(request);
+		}
+		
+		/**
+		 * HEAD リクエストのレスポンスヘッダーを処理します。
+		 * x-niconico-authflag が0ならログインしてない、1ならノーマルユーザーとしてログイン中、3ならプレミアムユーザーとしてログイン中です。
+		 * @param event
+		 * 
+		 */
+		private function checkLoginCompleteHandler(event:HTTPStatusEvent):void{
+			trace(event);
+			
+			var responseHeaders:Array = event.responseHeaders;
+			for (var index in responseHeaders) {
+				if (responseHeaders[index].name === 'x-niconico-authflag') {
+					if (responseHeaders[index].value === '0') {
+						reallyLogin();
+						return;
+					} else { // 1 = normal user, 2 = premium user
+						dispatchEvent(new Event(LOGIN_SUCCESS));
+						return;
+					}
+				}
+			}
+			reallyLogin(); // this should not occur
+			return;
+		}
+		
+		private function reallyLogin():void{
+			login(String(this._loginRequest.data.mail), String(this._loginRequest.data.password), LOGIN_URL, true, TOP_PAGE_URL, false);
 		}
 		
 		/**
