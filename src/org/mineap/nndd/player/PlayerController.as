@@ -244,7 +244,7 @@ package org.mineap.nndd.player
 			this.playListManager = playListManager;
 			this.videoPlayer = new VideoPlayer();
 			this.videoInfoView = new VideoInfoView();
-			this.videoInfoView.type = NativeWindowType.UTILITY;
+			//this.videoInfoView.type = NativeWindowType.UTILITY;
 			ConfigManager.getInstance().reload();
 			this.videoPlayer.init(this, videoInfoView, logManager);
 			this.videoInfoView.init(this, videoPlayer, logManager);

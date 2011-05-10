@@ -2,6 +2,16 @@
 
 NNDD (http://sourceforge.jp/projects/nndd/wiki/FrontPage) version 2.0.1 の派生版 
 
+== 本家との違い
+
+- プレーヤーの右クリックメニューに「クリップボードのファイル/URLを開く」を追加
+- VideoInfoView をダイアログではなく普通のウィンドウに
+
+=== 予定
+
+- コメント投稿したらすぐに文字が流れるように（現在はリクエスト完了時？）
+- 動画をマイリストから削除できるように（自分のマイリスト一欄を作ってそこを特別にすればいい？）
+
 == ビルド
 
 http://www.adobe.com/jp/products/air/tools/ から Flex4 SDK (ver 4.5) をダウンロードして展開する。
