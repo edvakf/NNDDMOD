@@ -39,6 +39,7 @@
 			private var videoDisplayMenuItem12:ContextMenuItem;
 			private var videoDisplayMenuItem13:ContextMenuItem;
 			private var videoDisplayMenuItem14:ContextMenuItem;
+			private var videoDisplayMenuItem15:ContextMenuItem;
 			
 			private var _contextMenuShowing:Boolean = false;
 			
@@ -52,6 +53,9 @@
 				videoDisplayMenu = new ContextMenu();
 				videoDisplayMenu.addEventListener(Event.DISPLAYING, videoDisplayContextMenuDisplayHandler);
 				videoDisplayMenu.addEventListener(Event.SELECT, videoDisplayContextMenuSelectHandler);
+				
+				videoDisplayMenuItem15 = new ContextMenuItem(Message.L_OPEN_FILE_FROM_CLIPBOARD);
+				videoDisplayMenuItem15.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, fileOpenFromClipboardClickEventHandler);
 				
 				videoDisplayMenuItem10 = new ContextMenuItem(Message.L_BACK);
 				videoDisplayMenuItem10.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, backClickEventHandler);
@@ -107,7 +111,7 @@
 				videoDisplayMenuItem14 = new ContextMenuItem(Message.L_RELOAD_VIDEO, true);
 				videoDisplayMenuItem14.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, videoReload);
 
-				videoDisplayMenu.customItems.push(videoDisplayMenuItem10, videoDisplayMenuItem11, videoDisplayMenuItem1, playListContextMenuItem, 
+				videoDisplayMenu.customItems.push(videoDisplayMenuItem15, videoDisplayMenuItem10, videoDisplayMenuItem11, videoDisplayMenuItem1, playListContextMenuItem, 
 					videoDisplayMenuItem2, videoDisplayMenuItem3, videoDisplayMenuItem4, videoDisplayMenuItem7, videoDisplayMenuItem5, 
 					videoDisplayMenuItem6, videoDisplayMenuItem9 ,videoDisplayMenuItem8, videoDisplayMenuItem12, videoDisplayMenuItem13, videoDisplayMenuItem14);
 				

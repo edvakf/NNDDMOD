@@ -51,6 +51,7 @@ package org.mineap.nndd
 		
 		public static var L_BACK:String = "一つ前の動画に戻る";
 		public static var L_OPEN_FILE:String = "ファイル/URLを指定して動画を開く";
+		public static var L_OPEN_FILE_FROM_CLIPBOARD:String = "クリップボードのファイル/URLを開く";
 		public static var L_OPEN_NICOMIMI:String = "nicomimi-にこみみ- でひらく(MP3)";
 		public static var L_OPEN_NICOSOUND:String = "にこ☆さうんど# でひらく(MP3)";
 		public static var L_OPEN_DEFAULT_WEB_BROWSER:String = "既定のブラウザで再生";

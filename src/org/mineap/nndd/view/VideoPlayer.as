@@ -945,9 +945,9 @@ private function resizeNow(event:ResizeEvent):void{
 	followInfoView(lastRect);
 }
 
-private function canvasVideoDroped(event:NativeDragEvent):void{
-	if(event.clipboard.hasFormat(ClipboardFormats.TEXT_FORMAT)){
-		var url:String = (event.clipboard.getData(ClipboardFormats.TEXT_FORMAT) as String);
+private function fileOpenFromClipboard(clipboard:Clipboard):void{
+	if(clipboard.hasFormat(ClipboardFormats.TEXT_FORMAT)){
+		var url:String = (clipboard.getData(ClipboardFormats.TEXT_FORMAT) as String);
 		
 		if(url == null){
 			return;
@@ -990,12 +990,20 @@ private function canvasVideoDroped(event:NativeDragEvent):void{
 			playerController.playMovie(url);
 			return;
 		}
-	}else if(event.clipboard.hasFormat(ClipboardFormats.FILE_LIST_FORMAT)){
-		var array:Array = (event.clipboard.getData(ClipboardFormats.FILE_LIST_FORMAT) as Array);
+	}else if(clipboard.hasFormat(ClipboardFormats.FILE_LIST_FORMAT)){
+		var array:Array = (clipboard.getData(ClipboardFormats.FILE_LIST_FORMAT) as Array);
 		if(array != null && (array[0] as File).url.match(new RegExp("http://www.nicovideo.jp/watch/|file:///")) != null){
 			playerController.playMovie(array[0].url);
 		}
 	}
+}
+
+public function fileOpenFromClipboardClickEventHandler(event:Event):void{
+	return fileOpenFromClipboard(Clipboard.generalClipboard);
+}
+
+private function canvasVideoDroped(event:NativeDragEvent):void{
+	return fileOpenFromClipboard(event.clipboard);
 }
 
 private function canvasVideoDragEnter(event:NativeDragEvent):void{
