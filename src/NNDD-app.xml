@@ -41,7 +41,7 @@
 	<initialWindow>
 		<!-- The main SWF or HTML file of the application. Required. -->
 		<!-- Note: In Flex Builder, the SWF reference is set automatically. -->
-		<content>[この値は Flex　Builder の出力ファイル app.xml　に上書きされます]</content>
+		<content>NNDD.swf</content>
 		
 		<!-- The title of the main window. Optional. -->
 		<!-- <title></title> -->
