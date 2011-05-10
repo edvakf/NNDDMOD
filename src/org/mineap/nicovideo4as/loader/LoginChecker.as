@@ -22,7 +22,7 @@ package org.mineap.nicovideo4as.loader
 		
 		private var x_niconico_authflag_value:String = null;
 		
-		public static const DEFAULT_LOGIN_URL:String = Login.LOGIN_URL;
+		public static const TOP_PAGE_URL:String = Login.TOP_PAGE_URL;
 		
 		public function LoginChecker(request:URLRequest = null)
 		{
@@ -36,7 +36,7 @@ package org.mineap.nicovideo4as.loader
 		 * @param url 
 		 * 
 		 */
-		public function check(url:String = DEFAULT_LOGIN_URL):void{
+		public function check(url:String = TOP_PAGE_URL):void{
 			
 			var request:URLRequest = new URLRequest(url);
 			request.method = URLRequestMethod.HEAD;

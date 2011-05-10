@@ -1608,7 +1608,7 @@ package org.mineap.nndd
 			
 			//FLVのURLを取得する為にニコニコ動画のAPIにアクセスする
 			var getAPIResult:URLRequest;
-			getAPIResult = new URLRequest("http://www.nicovideo.jp/api/getflv?v=" + videoID);
+			getAPIResult = new URLRequest("http://flapi.nicovideo.jp/api/getflv?v=" + videoID);
 			getAPIResult.method = "GET";
 			
 			if(type == VIDEO_DOWNLOAD){
@@ -2332,7 +2332,7 @@ package org.mineap.nndd
 		 */
 		private function getPostKey(res:String):void{
 			//<?xml version="1.0" encoding="UTF-8"?><packet><thread click_revision="925" last_res="84981" resultcode="0" revision="1" server_time="1232873115" thread="1214840698" ticket="0x1a274db8"/><view_counter id="sm3821007" mylist="17558" video="768016"/><chat date="1232870058" no="84981" thread="1214840698" user_id="2729410" vpos="16492">０</chat><num_click count="30" no="81372" thread="1214840698"/></packet>
-			//http://www.nicovideo.jp/api/getpostkey?thread=id&block_no=xxx
+			//http://flapi.nicovideo.jp/api/getpostkey?thread=id&block_no=xxx
 			
 			var xml:XML = new XML(res);
 			var xmlList:XMLList = xml.thread;
@@ -2349,7 +2349,7 @@ package org.mineap.nndd
 				var postKey:String = (event.target.data as String).substring(event.target.data.indexOf("=")+1);
 				postComment(postKey, userID, ticket, mail, String(vpos), threadID, isPremium);
 			});
-			var url:String = "http://www.nicovideo.jp/api/getpostkey/?block_no=" + block_no + "&thread=" + threadID + "&yugi=";
+			var url:String = "http://flapi.nicovideo.jp/api/getpostkey/?block_no=" + block_no + "&thread=" + threadID + "&yugi=";
 			trace(url);
 			loader.load(new URLRequest(url));
 			
@@ -2505,7 +2505,7 @@ package org.mineap.nndd
 		 * 
 		 */
 		private function getThumbInfo(videoID:String, index:int, isSave:Boolean):void{
-			//http://www.nicovideo.jp/api/getthumbinfo/動画ID
+			//http://ext.nicovideo.jp/api/getthumbinfo/動画ID
 			var loader:URLLoader;
 			loader = new URLLoader();
 			loader.addEventListener(IOErrorEvent.IO_ERROR, function(event:Event):void{

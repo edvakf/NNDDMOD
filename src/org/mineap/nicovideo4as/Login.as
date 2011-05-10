@@ -109,7 +109,7 @@ package org.mineap.nicovideo4as
 				this._loginChecker.addEventListener(Event.COMPLETE, checkCompleteEventHandler);
 				this._loginChecker.addEventListener(IOErrorEvent.IO_ERROR, checkErrorEventHandler);
 				this._loginChecker.addEventListener(SecurityErrorEvent.SECURITY_ERROR, checkErrorEventHandler);
-				this._loginChecker.check(url);
+				this._loginChecker.check(TOP_PAGE_URL);
 			}else{
 				loginInner();
 			}
@@ -126,6 +126,7 @@ package org.mineap.nicovideo4as
 			this._loginRequest = new URLRequest(this._url);
 			this._loginRequest.method = URLRequestMethod.POST;
 			this._loginRequest.data = variables;
+			this._loginRequest.followRedirects = false;
 			
 			this._loginLoader.addEventListener(HTTPStatusEvent.HTTP_RESPONSE_STATUS, httpCompleteHandler);
 			this._loginLoader.addEventListener(IOErrorEvent.IO_ERROR, errorHandler);
@@ -197,13 +198,22 @@ package org.mineap.nicovideo4as
 			
 			dispatchEvent(event);
 			
-			if (event.status != 200) {
+			if (event.status != 302) {
 				dispatchEvent(new ErrorEvent(LOGIN_FAIL, false, false, "status:" + event.status));
 				
 				return;
 			}
 			
-			if (event.responseURL.indexOf(LOGIN_FAIL_MESSAGE) != -1){
+			var location:String;
+			for each(var header:Object in event.responseHeaders) {
+				if (header.name != null && header.name is String &&
+						(header.name as String).toLowerCase() == "location") {
+					location = header.value;
+					break;
+				}
+			}
+			trace(location);
+			if (location && location.indexOf(LOGIN_FAIL_MESSAGE) != -1){
 				dispatchEvent(new ErrorEvent(LOGIN_FAIL, false, false, LOGIN_FAIL_MESSAGE + ",status:" + event.status));
 				
 				return;

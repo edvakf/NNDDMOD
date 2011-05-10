@@ -107,7 +107,7 @@ package org.mineap.nicovideo4as
 					dispatchEvent(new IOErrorEvent(API_GET_POST_KEY_ACCESS_ERROR, false, false, event.text));
 				});
 				loader.addEventListener(Event.COMPLETE, getPostKeySuccess);
-				loader.load(new URLRequest("http://www.nicovideo.jp/api/getpostkey?thread=" + threadID + "&block_no=" + int((commentCount+1)/100)));
+				loader.load(new URLRequest("http://flapi.nicovideo.jp/api/getpostkey?thread=" + threadID + "&block_no=" + int((commentCount+1)/100)));
 				
 			}catch(error:Error){
 				trace(error.getStackTrace());

@@ -45,8 +45,8 @@ package org.mineap.nicovideo4as
 		 */
 		public function getThumbInfo(videoId:String):void{
 			
-			//http://www.nicovideo.jp/api/getthumbinfo/動画ID
-//			this._thumbInfoLoader.load(new URLRequest("http://www.nicovideo.jp/api/getthumbinfo/" + videoId));
+			//http://ext.nicovideo.jp/api/getthumbinfo/動画ID
+//			this._thumbInfoLoader.load(new URLRequest("http://ext.nicovideo.jp/api/getthumbinfo/" + videoId));
 			
 			this._thumbInfoLoader.addEventListener(Event.COMPLETE, getThumbInfoSuccess);
 			this._thumbInfoLoader.addEventListener(IOErrorEvent.IO_ERROR, errorEventHandler);

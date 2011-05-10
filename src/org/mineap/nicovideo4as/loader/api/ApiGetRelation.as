@@ -12,7 +12,7 @@ package org.mineap.nicovideo4as.loader.api
 	public class ApiGetRelation extends URLLoader
 	{
 		
-		public static const NICO_API_GET_RELATION:String = "http://www.nicovideo.jp/api/getrelation";
+		public static const NICO_API_GET_RELATION:String = "http://flapi.nicovideo.jp/api/getrelation";
 		
 		/**
 		 * 
