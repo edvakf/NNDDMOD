@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/nndd/!svn/ver/524/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite
+END
+Queries.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/nndd/!svn/ver/474/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite/Queries.as
+END
+SQLiteLibraryManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svnroot/nndd/!svn/ver/524/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite/SQLiteLibraryManager.as
+END
+DbAccessHelper.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/nndd/!svn/ver/438/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite/DbAccessHelper.as
+END

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/nndd/!svn/ver/545/NNDDv2/trunk/src/org/mineap/nndd
+END
+NNDDSearchListRenewer.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/NNDDSearchListRenewer.as
+END
+NNDDDownloader.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/nndd/!svn/ver/541/NNDDv2/trunk/src/org/mineap/nndd/NNDDDownloader.as
+END
+NNDD.as
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/nndd/!svn/ver/545/NNDDv2/trunk/src/org/mineap/nndd/NNDD.as
+END
+RenewDownloadManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/nndd/!svn/ver/485/NNDDv2/trunk/src/org/mineap/nndd/RenewDownloadManager.as
+END
+Message.as
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/nndd/!svn/ver/446/NNDDv2/trunk/src/org/mineap/nndd/Message.as
+END
+NNDDMyListAdder.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/nndd/!svn/ver/481/NNDDv2/trunk/src/org/mineap/nndd/NNDDMyListAdder.as
+END
+NNDDVideoPageWatcher.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/NNDDVideoPageWatcher.as
+END
+FileIO.as
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/FileIO.as
+END
+SystemTrayIconManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/SystemTrayIconManager.as
+END
+Access2Nico.as
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/nndd/!svn/ver/531/NNDDv2/trunk/src/org/mineap/nndd/Access2Nico.as
+END
+NNDDMyListLoader.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/NNDDMyListLoader.as
+END
+LogManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/nndd/!svn/ver/505/NNDDv2/trunk/src/org/mineap/nndd/LogManager.as
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/nndd/!svn/ver/510/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite/dao
+END
+NNDDVideoDao.as
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/nndd/!svn/ver/510/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite/dao/NNDDVideoDao.as
+END
+NNDDVideoTagStringDao.as
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite/dao/NNDDVideoTagStringDao.as
+END
+FileDao.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite/dao/FileDao.as
+END
+TagStringDao.as
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite/dao/TagStringDao.as
+END
+VersionDao.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/library/sqlite/dao/VersionDao.as
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/nndd/!svn/ver/524/NNDDv2/trunk/src/org/mineap/nndd/library
+END
+LocalVideoInfoLoader.as
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/nndd/!svn/ver/507/NNDDv2/trunk/src/org/mineap/nndd/library/LocalVideoInfoLoader.as
+END
+LibraryManagerBuilder.as
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svnroot/nndd/!svn/ver/522/NNDDv2/trunk/src/org/mineap/nndd/library/LibraryManagerBuilder.as
+END
+LibraryDirSearchUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/library/LibraryDirSearchUtil.as
+END
+ILibraryManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/nndd/!svn/ver/494/NNDDv2/trunk/src/org/mineap/nndd/library/ILibraryManager.as
+END
+LibraryTreeBuilder.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/library/LibraryTreeBuilder.as
+END

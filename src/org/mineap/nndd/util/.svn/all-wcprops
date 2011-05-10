@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svnroot/nndd/!svn/ver/530/NNDDv2/trunk/src/org/mineap/nndd/util
+END
+RelationTypeUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/RelationTypeUtil.as
+END
+WebServiceAccessUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/WebServiceAccessUtil.as
+END
+LogUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/nndd/!svn/ver/499/NNDDv2/trunk/src/org/mineap/nndd/util/LogUtil.as
+END
+MyListUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/nndd/!svn/ver/428/NNDDv2/trunk/src/org/mineap/nndd/util/MyListUtil.as
+END
+NicoServerStatusCheck.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/nndd/!svn/ver/385/NNDDv2/trunk/src/org/mineap/nndd/util/NicoServerStatusCheck.as
+END
+ConfFileUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/nndd/!svn/ver/437/NNDDv2/trunk/src/org/mineap/nndd/util/ConfFileUtil.as
+END
+VideoPrefix.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/VideoPrefix.as
+END
+IchibaBuilder.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/IchibaBuilder.as
+END
+NicoPattern.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/NicoPattern.as
+END
+NumberUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/NumberUtil.as
+END
+RankingStringBuilder.as
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/RankingStringBuilder.as
+END
+ThumbInfoUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/ThumbInfoUtil.as
+END
+TreeDataBuilder.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/TreeDataBuilder.as
+END
+ThumbInfoAnalyzer.as
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/nndd/!svn/ver/530/NNDDv2/trunk/src/org/mineap/nndd/util/ThumbInfoAnalyzer.as
+END
+LibraryUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/nndd/!svn/ver/464/NNDDv2/trunk/src/org/mineap/nndd/util/LibraryUtil.as
+END
+NNDDThumbInfoAnalyzer.as
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/nndd/!svn/ver/432/NNDDv2/trunk/src/org/mineap/nndd/util/NNDDThumbInfoAnalyzer.as
+END
+ShortUrlChecker.as
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/nndd/!svn/ver/426/NNDDv2/trunk/src/org/mineap/nndd/util/ShortUrlChecker.as
+END
+DateUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/nndd/!svn/ver/485/NNDDv2/trunk/src/org/mineap/nndd/util/DateUtil.as
+END
+CategoryUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/CategoryUtil.as
+END
+TreeItemUtil.as
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/TreeItemUtil.as
+END
+PathMaker.as
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svnroot/nndd/!svn/ver/370/NNDDv2/trunk/src/org/mineap/nndd/util/PathMaker.as
+END
