@@ -56,11 +56,11 @@ package org.mineap.nicovideo4as.loader
 			for each(var header:Object in event.responseHeaders) {
 				if (header.name != null && header.name is String &&
 						(header.name as String).toLowerCase() == "x-niconico-authflag") {
-					value = header.value;
+					this.x_niconico_authflag_value = value = header.value;
 					break;
 				}
 			}
-			trace(value);
+			trace("x-niconico-authflag:" + value);
 			return value;
 		}
 		

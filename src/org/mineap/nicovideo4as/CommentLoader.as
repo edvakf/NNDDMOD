@@ -73,13 +73,11 @@ package org.mineap.nicovideo4as
 		
 		/**
 		 * ニコニコ動画にアクセスしてコメントを取得します。
-		 * threadIdが指定された場合はapiAccessの結果を使わずに指定されたthreadIdを使用します。
 		 * 
 		 * @param videoId コメントを取得したい動画の動画ID。
 		 * @param count 取得するコメントの数。
 		 * @param isOwnerComment 投稿者コメントかどうか
 		 * @param apiAccess getFlvにアクセスするApiGetFlvAccessオブジェクト
-		 * @param threadId スレッドID
 		 * @param when 過去ログを取得する際の取得開始時刻
 		 * @param waybackkey 過去ログを取得する際に必要なwaybackkey
 		 */
@@ -277,6 +275,15 @@ package org.mineap.nicovideo4as
 		 */
 		public function get economyMode():Boolean{
 			return this._getflvAnalyzer.economyMode;
+		}
+		
+		/**
+		 * APIの結果から取得したプレミアム会員かどうか情報を返します。
+		 * @return プレミアム会員のときはtrue
+		 * 
+		 */
+		public function get isPremium():Boolean{
+			return this._getflvAnalyzer.isPremium;
 		}
 		
 		/**

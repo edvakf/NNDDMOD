@@ -8,10 +8,13 @@ NNDD (http://sourceforge.jp/projects/nndd/wiki/FrontPage) version 2.0.1 の派�
 - VideoInfoView をダイアログではなく普通のウィンドウに
 - ログイン処理を効率化。ログイン時のリダイレクトをフォローしない。ログインチェックに HTTPS ではなく HTTP を使う。
 - API アクセスに www.nicovideo.jp ではなく flapi.nicovideo.jp を使うように
+- コメント投稿したらすぐに流れるように（下線つき）
+- PlayerController.as でコメント投稿のときに Access2Nico ではなく CommentPost を使うように
+- CommentPost.as を色々修正。ログインして投稿とか
+- LoginChecker.as の isAlreadyLogin がいつも false を返していたのを修正
 
 === 予定
 
-- コメント投稿したらすぐに文字が流れるように（現在はリクエスト完了時？）
 - 動画をマイリストから削除できるように（自分のマイリスト一欄を作ってそこを特別にすればいい？）
 
 == ビルド
